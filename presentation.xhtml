@@ -1,0 +1,1479 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+      xml:lang="fr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="copyright"
+            content="Stéphane Sire, Oppidoc, Journée des professionnels du numérique, 19/02/2014, Tours  (généré le 20/02/2014)"/>
+      <title>Support de formation</title>
+      <link rel="stylesheet" type="text/css" media="screen, projection, print"
+            href="resources/Slidy2/styles/slidy.css"/>
+      <link rel="stylesheet" type="text/css" media="screen, projection, print"
+            href="resources/Slidy2/styles/w3c-blue.css"/>
+      <link rel="stylesheet" type="text/css" media="screen, projection, print"
+            href="resources/course.css"/>
+      <script src="resources/Slidy2/scripts/slidy.js" charset="utf-8" type="text/javascript">//</script>
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js">//</script>
+      <script src="resources/ace-builds-master/src-noconflict/ace.js" type="text/javascript"
+              charset="utf-8">//</script>
+      <script>
+          (function () {
+            function doScaleText ( e, incr ) {
+              var mask = $(e.target).closest('.mask'),
+                  pre = mask.find('pre'),
+                  size, m, nsize;
+              if (pre.length === 0) {
+                pre = mask.find('div.pre');
+              }
+              size = pre.css('font-size') || '20';
+              m = size.match(/(\d+)/);
+              nsize = (m) ? parseInt(m) : 20;
+              pre.css('font-size', (nsize + incr) + 'px');
+            };
+            function doColorize ( e ) {
+              var root = $(e.target).closest('.mask'),
+                  pre = root.find('pre'),
+                  lines = pre.contents(),
+                  size = pre.css('font-size') || '20px',
+                  t = root.append('&lt;div class="pre"/&gt;').find('div.pre').get(0),
+                  language = pre.attr('data-language');
+              lines.each(function(i,e){t.appendChild(e)});
+              pre.remove();
+              $(t).css('font-size', size);
+              editor = ace.edit(t);
+              editor.setOptions({
+                    readOnly: true,
+                    highlightActiveLine: false,
+                    highlightGutterLine: false,
+                    maxLines: Infinity
+              });
+              editor.setTheme("ace/theme/textmate");
+              editor.getSession().setMode("ace/mode/" + language);
+              // $(e.target).css('z-index', 0);
+              $(e.target).hide();
+            };
+            function init() {
+              $('div.commands &gt; button[data-command="ace"]').click( doColorize );
+              $('div.commands &gt; button[data-command="text-in"]').click( function (e) { doScaleText(e,2) } );
+              $('div.commands button[data-command="text-out"]').click( function (e) { doScaleText(e,-2) } );
+            };
+            jQuery(init);
+          }());
+      </script>
+      <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8580336-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+   </head>
+   <body>
+      <div class="background"/>
+      <div class="slide">
+         <h1>Présentation</h1>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <h2>Nouvelles méthodes de développement web</h2>
+                  <h2>avec les technologies centrées document</h2>
+                  <p>
+                     <strong>du projet européen Palette à la création d'Oppidoc</strong>
+                  </p>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <p>Par Stéphane Sire</p>
+                  <p>
+                     <a href="http://www.oppidoc.fr/" target="_blank">www.oppidoc.fr</a>
+                  </p>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <p>Présentation donnée le 19 février 2014 aux <a href="http://cesr.univ-tours.fr/actualites/journee-des-professionnels-les-metiers-du-numerique-375710.kjsp?RH=CESR_FR"
+                        target="_blank">journées des professionnels du numérique</a> organisée par le <a href="http://cesr.univ-tours.fr/" target="_blank">CESR</a> de Tours</p>
+               </li>
+            </ul>
+         </div>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <p>
+                     <em>Remerciements</em> :</p>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:33%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <img src="images/logo-epfl.gif" style="width:75%"/>
+                  </div>
+               </li>
+               <li>
+                  <p>
+                     <a href="http://media.epfl.ch" target="_blank">MEDIA research group</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:33%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <img src="images/logo-inria.png" style="width:75%"/>
+                  </div>
+               </li>
+               <li>
+                  <p>
+                     <a href="http://wam.inrialpes.fr/" target="_blank">Projet WAM</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:33%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <img src="images/logo-tudor.png" style="width:75%"/>
+                  </div>
+               </li>
+               <li>
+                  <p>
+                     <a href="http://www.tudor.lu/fr" target="_blank">Centre de recherche Henri Tudor</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Partie I</h1>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <h2>Édition des documents</h2>
+                  <h2>Le navigateur comme plateforme d'édition</h2>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Document structuré</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Mise en forme de l'information suivant une structure</p>
+                  <ul class="sublist">
+                     <li>La structure dépend du support ou de l'utilisation</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:49%">
+            <ul class="block bullet">
+               <li>
+                  <p>Structure(s) Physiques</p>
+                  <div class="illustration">
+                     <img src="images/document-physique.png" style="width:100%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:49%">
+            <ul class="block bullet">
+               <li>
+                  <p>Structure(s) Logiques</p>
+                  <div class="illustration">
+                     <img src="images/document-logique.png" style="width:100%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="clear:left">
+            <ul class="block none">
+               <li>
+                  <p>“<em>On the left, what browsers see. On the right, what humans see. Can we bridge the gap so browsers see more of what we see?</em>”</p>
+                  <p>Source : <a href="http://www.w3.org/TR/xhtml-rdfa-primer/" target="_blank">RDFa 1.1 Primer Rich Structured Data Markup for Web Documents</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Sur le web...</h1>
+         <div class="region" style="clear:left">
+            <ul class="block bullet">
+               <li>
+                  <p>Les documents sont représentés au niveau de la typographie et de la mise en forme</p>
+                  <ul class="sublist">
+                     <li>HTML</li>
+                     <li>Pourtant ils contiennent des données structurées</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:32%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <a class="e-link" href="images/site-assemblee-nationale.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/site-assemblee-nationale.png" style="width:100%"/>
+                     <p class="legend">
+                        <a href="http://questions.assemblee-nationale.fr/q14/14-14884QE.htm"
+                           target="_blank">question au gouvernement</a>
+                     </p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:32%;">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <a class="e-link" href="images/site-chatellerault-menus.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/site-chatellerault-menus.png" style="width:100%"/>
+                     <p class="legend">
+                        <a href="http://www.ville-chatellerault.fr/a-votre-service/famille/restauration-scolaire/menus"
+                           target="_blank">menu de cantine</a>
+                     </p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:32%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <a class="e-link" href="images/site-fourviere-festival.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/site-fourviere-festival.png" style="width:100%"/>
+                     <p class="legend">
+                        <a href="http://69.agendaculturel.fr/festival/nuits-de-fourviere-2014.html"
+                           target="_blank">agenda culturel</a>
+                     </p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="clear:left">
+            <ul class="block bullet">
+               <li>
+                  <p>Notion de <strong>document semi-structuré</strong>
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Encoder les documents</h1>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <h2>XML</h2>
+                  <p>"XML is about creating documents in which the content is delimited, or set apart, by tags that explain the meaning of each piece of content. With XML, documents can become a source of information as rich as a database, enabling search, processing, and reuse."</p>
+               </li>
+            </ul>
+         </div>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <p>
+                     <em>Jean Paoli</em>, <em>co-éditeur de la recommandation XML 1.0</em> (<a href="http://office.microsoft.com/en-us/infopath-help/jean-paoli-on-microsoft-office-infopath-2003-HA001136140.aspx"
+                        target="_blank">source</a>)</p>
+               </li>
+            </ul>
+            <ul class="block bullet">
+               <li>
+                  <p>Extensible Markup Language (XML) 1.0 - Recommendation W3C</p>
+                  <ul class="sublist">
+                     <li>1998 : <a href="http://www.w3.org/TR/1998/REC-xml-19980210" target="_blank">Première édition</a>
+                     </li>
+                     <li>2008 : <a href="http://www.w3.org/TR/REC-xml/" target="_blank">Cinquième édition</a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Exemple Niveau Physique</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml" style="font-size:16px">&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;La « neuro-amélioration » passée au crible du comité d’éthique&lt;/h1&gt;
+    &lt;div class="Subheadline"&gt;
+      &lt;p&gt;Par Hervé Morin&lt;/p&gt;
+      &lt;p&gt;&lt;i&gt;Mis à jour le 12.02.2014 à 16h59&lt;/i&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;Dans son avis n° 122, rendu public mercredi 12 février, le Comité
+       consultatif national d’éthique (CCNE) examine les enjeux du « recours
+      aux techniques biomédicales en vue de “neuro-amélioration” chez la
+      personne non malade ». De quoi s’agit-il ? De l’emploi de médicaments
+      (anxiolytiques, antidépresseurs, stimulants cognitifs…) ou de la
+      stimulation cérébrale transcrânienne pour améliorer les performances
+      cognitives de tout un chacun.&lt;/p&gt;
+      &lt;p&gt;&lt;a href="http://www.lemonde.fr/2011/12/16/dasc.html"&gt;Des aimants 
+      pour soigner le cerveau&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/html&gt;</pre>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Exemple Niveau Logique</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml" style="font-size:16px">&lt;Document&gt;
+  &lt;Title&gt;La « neuro-amélioration » passée au crible du comité d’éthique&lt;/Title&gt;
+  &lt;Author&gt;Hervé Morin&lt;/Author&gt;
+  &lt;Publication&gt;
+    &lt;Date&gt;12/02/2014&lt;/Date&gt;
+    &lt;Time&gt;16:59&lt;/Time&gt;
+  &lt;/Publication&gt;
+  &lt;Article&gt;
+    &lt;Para&gt;Dans son avis n° 122, rendu public mercredi 12 février, le Comité
+     consultatif national d’éthique (CCNE) examine les enjeux du « recours aux
+     techniques biomédicales en vue de “neuro-amélioration” chez la personne
+     non malade »...&lt;/Para&gt;
+  &lt;/Article&gt;
+  &lt;Link&gt;
+    &lt;Target&gt;http://www.lemonde.fr/2011/12/16/dasc.html&lt;/Target&gt;
+    &lt;Anchor&gt;Des aimants pour soigner le cerveau&lt;/Anchor&gt;
+  &lt;/Link&gt;
+&lt;/Document&gt;</pre>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Pourquoi structurer ?</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>
+                     <strong>Recherche</strong>
+                  </p>
+                  <p>Ex: <em>retrouver les questions posées au gouvernement à l'assemblée nationale entre mai et décembre 2013 sur la sécurité des données ou le droit à la vie privée </em>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <strong>Réutilisation</strong>
+                  </p>
+                  <p>Ex: <em>créer le rapport final sur le projet en combinant la section sur l'étude de cas de la demande de de financement, le document sur la décision de financement, et la section sur l'analyse des questionnaires de satisfaction sur le document de retour d'expérience, générer un eBook et un PDF</em>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <strong>Capitalisation</strong>
+                  </p>
+                  <p>Ex: <em>analyser l'évolution des menus de la cantine sur ces 3 dernières années, vérifier l'équilibre entre les viandes et les poissons</em>
+                  </p>
+               </li>
+               <li>
+                  <p>Cas particuliers des documents <em>exécutables</em>
+                  </p>
+                  <p>Certains documents sont de nature à être traité informatiquement pour générer des applications ou piloter des processus :</p>
+                  <ul class="sublist">
+                     <li>Spécifications de tests, questionnaires, Quiz, etc.</li>
+                     <li>Spécifications de logiciels</li>
+                     <li>Configurations d'équipements</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Notre projet initial</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Le projet FP6 Palette</p>
+                  <p>
+                     <em>“Développer des services pour l'apprentissage dans les communautés de pratiques”</em>
+                  </p>
+               </li>
+               <li>
+                  <p>Extrait du site Cordis</p>
+                  <ul class="sublist">
+                     <li>Strategic objective: Technology-enhanced Learning</li>
+                     <li>Start date: 1 February 2006</li>
+                     <li>Duration: 36 months</li>
+                     <li>EU funding: &#128; 6 000 000</li>
+                     <li>Number of partners: 14</li>
+                     <li>Project coordinator: GEIE ERCIM, Sophia Antipolis, France</li>
+                     <li>Scientific coordinator: Christine Vanoirbeek, EPFL, Suisse</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Lien avec l'édition de documents</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Les communautés de pratique produisent des artefacts</p>
+               </li>
+               <li>
+                  <p>En particulier des documents</p>
+                  <div class="illustration">
+                     <a class="e-link" href="images/rapport-observation-classe.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/rapport-observation-classe.png" style="width:60%"/>
+                     <p class="legend">Exemple de rapport d'observation d'une classe</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Sous-utilisation des documents</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Les documents sont créés avec Microsoft Word ou autres éditeurs orientés page</p>
+               </li>
+               <li>
+                  <p>Les données sont très peu exploitées</p>
+                  <ul class="sublist">
+                     <li>pas ou peu de réutilisation (copier / coller)</li>
+                     <li>pas d'outils de recherche</li>
+                     <li>obstacle à la capitalisation des connaissances</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>
+                     <strong>Objectif</strong> :  encourager les communautés à structurer leurs documents</p>
+                  <ul class="sublist">
+                     <li>contraindre la saisie sans l’alourdir</li>
+                     <li>avec une solution facile à mettre en oeuvre pour que les communautés puissent créer leurs modèles de documents</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>La solution de L'INRIA</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Saisie contrainte par un template de document défini dans un langage <a href="http://www.w3.org/Amaya/Templates/XTiger-spec.html" target="_blank">XTiger</a>
+                  </p>
+               </li>
+               <li>
+                  <p>Le langage de spécification est de complexité moindre que <a href="http://www.w3.org/XML/Schema" target="_blank">XML Schema</a>
+                  </p>
+               </li>
+               <li>
+                  <p>Fonctionnalité intégrée dans le navigateur <a href="http://www.w3.org/Amaya/Templates/Overview.html" target="_blank">Amaya</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:49%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <img src="images/amaya-xtiger-example1.png" style="width:100%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:49%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <img src="images/amaya-xtiger-example2.png" style="width:100%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="clear:left">
+            <ul class="block bullet">
+               <li>
+                  <p>Le navigateur <a href="http://www.w3.org/Amaya/" target="_blank">Amaya</a> sert également d'éditeur de template XTiger</p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Alternative Formulaire</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Structures de données "plates" (clefs - valeurs)</p>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/recetteMarmitonorg.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/recetteMarmitonorg.png" style="width:50%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Alternative Wiki</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Modèle de sortie limité à HTML</p>
+               </li>
+               <li>
+                  <p>Syntaxe wiki rébarbative</p>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/wikipediaFragment.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/wikipediaFragment.png" style="width:80%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Alternative Éditeur d'arbre</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Pour utilisateurs avertis</p>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/hamlet.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/hamlet.png" style="width:80%"/>
+                     <p class="legend">Exemple Oxygen Editor</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Alternative WYSIWYG</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Saisie contrainte par un schéma XML</p>
+                  <ul class="sublist">
+                     <li>Nécessite des compétences pointues pour créer un éditeur</li>
+                  </ul>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/xopus-recipe.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/xopus-recipe.png" style="width:60%"/>
+                     <p class="legend">Exemple <a href="http://www.xopus.com" target="_blank">Xopus</a> vue WYSIWYG</p>
+                  </div>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/xopus-recipe-xml.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/xopus-recipe-xml.png" style="width:70%"/>
+                     <p class="legend">Vue source XML</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Barrières d'adoption à Amaya</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>L'installation d'une nouvelle application</p>
+               </li>
+               <li>
+                  <p>La concurrence avec les navigateurs récents</p>
+               </li>
+               <li>
+                  <p>La concurrence avec les outils bureautiques WYSISYG</p>
+               </li>
+               <li>
+                  <p>La surexposition de concepts trop bas niveau</p>
+                  <ul class="sublist">
+                     <li>&lt;balise&gt;</li>
+                     <li>@attribut</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>L'idée germe...</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Contexte 2008 : montée en puissance de Javascript dans les navigateurs web</p>
+               </li>
+               <li>
+                  <p>
+                     <strong>Porter XTiger en Javascript dans un navigateur Web</strong>
+                  </p>
+                  <ul class="sublist">
+                     <li>pour éviter d'avoir à installer un navigateur spécifique</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Premiers prototypes prometteurs avec des stagiaires</p>
+               </li>
+               <li>
+                  <p>Des interprétations divergentes sur la spécification XTiger entrainent l'écriture d'une nouvelle spécification</p>
+                  <ul class="sublist">
+                     <li>
+                        <a href="http://ssire.github.io/xtiger-xml-spec/" target="_blank">XTiger XML</a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <p>La librairie s'appellera <strong>AXEL</strong> (Adaptable XML Editing Library)</p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>La librairie AXEL</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Tout en Javascript sans utiliser d'autres librairies (Prototype, jQuery, etc.)</p>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="http://ssire.github.io/axel/editor/editor.xhtml"
+                        target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/cv-haddock.png" style="width:80%"/>
+                     <p class="legend">éditeur de démonstration pour tester les templates de documents</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Fonctionnement de la librairie AXEL</h1>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <img src="images/axel-overview.png" style="width:100%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Le langage XTiger XML</h1>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <div class="illustration" style="text-align:center">
+                     <img src="images/axel-millefeuille.png" style="width:80%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Template XTiger XML minimal</h1>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xt="http://ns.inria.org/xtiger"&gt;
+&lt;head&gt;
+ &lt;xt:head label="Document"&gt;
+   &lt;xt:component name="t_friend"&gt; 
+     &lt;li&gt;&lt;xt:use types="text"&gt;nom&lt;/xt:use&gt;&lt;xt:menu-marker/&gt;&lt;/li&gt;
+   &lt;/xt:component&gt;
+ &lt;/xt:head&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;h1&gt;Liste des invités :&lt;/h1&gt;
+ &lt;ul&gt; 
+   &lt;xt:repeat minOccurs="0" maxOccurs="*" label="Invites"&gt;
+     &lt;xt:use types="t_friend" label="Nom"/&gt;
+   &lt;/xt:repeat&gt;
+ &lt;/ul&gt;
+&lt;/body&gt; 
+&lt;/html&gt;</pre>
+                  </div>
+               </li>
+               <li>
+                  <p>Exemples de document généré :</p>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml">&lt;Document&gt;
+  &lt;Invites&gt;
+    &lt;Nom&gt;Charlie&lt;/Nom&gt;
+    &lt;Nom&gt;Oscar&lt;Nom&gt;
+  &lt;/Invites&gt;
+&lt;/Document&gt;</pre>
+                  </div>
+               </li>
+               <li>
+                  <p>Le voir <a href="samples/invites.xhtml" target="_blank">en action</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Utilisation de AXEL</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>1 fichier Javascript (axel.js) et 1 fichier css à inclure (axel.css)</p>
+                  <ul class="sublist">
+                     <li>+ 1 répertoire de resources (bundles) à mettre à disposition</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>3 cas pour éditer un document dans une page</p>
+                  <ul class="sublist">
+                     <li>La page est déjà un template XTiger XML</li>
+                     <li>La page contient un élément <tt>div</tt> dans lequel on va charger un template XTiger XML séparé</li>
+                     <li>La page contient un élément <tt>iframe</tt> qui contient le template XTiger XML séparé</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Fonctions pour</p>
+                  <ul class="sublist">
+                     <li>Lire un document XML et de le charger dans l'éditeur</li>
+                     <li>Linéariser le contenu en cours d'édition pour l'envoyer sur un serveur</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Opérations accessibles via un objet <tt>$axel</tt>
+                  </p>
+                  <ul class="sublist">
+                     <li>Familier pour les développeurs habitués à jQuery</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>API Javascript</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Extrait de template</p>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml">&lt;div id="editor"&gt;
+  &lt;p&gt;
+    &lt;xt:use types="text" label="Text"&gt;Hello&lt;/xt:use&gt;
+    &lt;xt:use types="text" label="Text"&gt;World&lt;/xt:use&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</pre>
+                  </div>
+               </li>
+               <li>
+                  <p>Manipulation de son contenu XML avec <tt>$axel(selecteur)</tt>
+                  </p>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre>&gt;&gt;&gt; $axel('#editor').transform()
+&gt;&gt;&gt; $axel('#editor').xml()
+"&lt;data&gt;
+  &lt;Text&gt;Hello&lt;/Text&gt;
+  &lt;Text&gt;World&lt;/Text&gt;
+&lt;/data&gt;
+"
+&gt;&gt;&gt; $axel('#editor').text()
+"Hello World"</pre>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>L'idée se développe...</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>2009 : à l'issue du projet l'un des partenaires propose un défi pour continuer</p>
+                  <ul class="sublist">
+                     <li>Reproduire un document Word de spécification de questionnaires</li>
+                     <li>Épargner la phase de conversion en XML</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>2010 : projet CTI (~ ANR) pour travailler 1 an avec la startup Madeinlocal</p>
+                  <ul class="sublist">
+                     <li>Intégration dans un environnement de production Ruby on Rails</li>
+                     <li>Nouvelles questions soulevées par la pratique (évolution de schémas)</li>
+                     <li>
+                        <a href="http://www.oppidoc.fr/articles/xml-prague" target="_blank">Authoring XML all the Time, Everywhere and by Everyone</a> avec V. Quint, C. Roisin et C. Vanoirbeek, présenté à XML Prague 2010</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Démonstrations</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Un éditeur de <a href="http://www.oppidoc.fr/demos/quizz" target="_blank">Quizz</a>
+                  </p>
+               </li>
+               <li>
+                  <p>Cette présentation a été créée avec un template XTiger XML</p>
+               </li>
+               <li>
+                  <p>Voir sur les sites de diffusion de la librairie</p>
+                  <ul class="sublist">
+                     <li>Éditeur de démonstration AXEL : <a href="http://ssire.github.io/axel/editor/editor.xhtml" target="_blank">ssire.github.io/axel/editor/editor.xhtml</a>
+                     </li>
+                     <li>Éditeur de démonstration AXEL-FORMS : <a href="http://ssire.github.io/axel-forms/editor/editor.xhtml" target="_blank">ssire.github.io/axel-forms/editor/editor.xhtml</a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Notes</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Importance de la license open source</p>
+                  <ul class="sublist">
+                     <li>Condition pour faire vivre le projet</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Très nombreuses licences</p>
+                  <ul class="sublist">
+                     <li>GPL, BSD, MIT, Apache, etc.</li>
+                     <li>Se distinguent par le degré de <em>contagion</em>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Gestion d'une communauté open source</p>
+                  <ul class="sublist">
+                     <li>Dépots de code</li>
+                     <li>Listes de diffusion</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Partie II</h1>
+         <div class="region">
+            <ul class="block none">
+               <li>
+                  <h2>Développement complet d'applications web</h2>
+                  <h2>La pile XML</h2>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Transformation des technos documents</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>À l'origine du texte mis en forme (<strong>XML</strong>) pour</p>
+                  <ul class="sublist">
+                     <li>servir de source unique (<em>single source</em>)</li>
+                     <li>pour publier sur plusieurs canaux (<em>cross-media publishing</em>)</li>
+                     <li>avec l'aide de <strong>langages de transformation</strong> (<strong>CSS, XSLT</strong>)</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Puis les documents textuels deviennent de véritables bases de données</p>
+                  <ul class="sublist">
+                     <li>pour supporter des traitements sémantiques</li>
+                     <li>avec l'aide de  <strong>langages d'interrogation</strong> (<strong>XPath, XQuery</strong>)</li>
+                     <li>les catalogues de données deviennent des collections de documents</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Finalement les bases de données XML deviennent des plateformes de développement web...</p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Plateformes de développement</h1>
+         <div class="region" style="clear:left">
+            <ul class="block bullet">
+               <li>
+                  <p>Suivant les cas</p>
+                  <ul class="sublist">
+                     <li>Bases de données natives XML</li>
+                     <li>Moteurs XQuery avec des connecteurs pour différents systèmes de stockage</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:49%">
+            <ul class="block bullet">
+               <li>
+                  <p>Projet open source <a href="http://exist-db.org/" target="_blank">eXist-DB</a>
+                  </p>
+                  <div class="illustration">
+                     <img src="images/existdb.gif" style="width:60%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:49%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <img src="images/eXist-book.jpg" style="width:40%"/>
+                     <p class="legend">Livre en cours de parution chez O'Reilly</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="clear:left">
+            <ul class="block bullet">
+               <li>
+                  <p>Alternatives ...</p>
+                  <ul class="sublist">
+                     <li>
+                        <a href="MarkLogic" target="_blank">MarcLogic</a>
+                     </li>
+                     <li>
+                        <a href="http://basex.org/" target="_blank">BaseX</a>
+                     </li>
+                     <li>
+                        <a href="http://www.zorba.io/" target="_blank">Zorba</a>
+                     </li>
+                     <li>
+                        <a href="http://www.axyana.com/qizxopen/" target="_blank">Qizx</a> (aquis récemment par Qualcomm)</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Architecture XRX</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Saisie et présentation des données avec XForms</p>
+                  <ul class="sublist">
+                     <li>dans notre cas remplacé par AXEL</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Intégration du serveur web avec la base de données</p>
+                  <ul class="sublist">
+                     <li>
+                        <a href="http://xquerywebappdev.wordpress.com/2011/11/18/node-js-is-good-for-solving-problems-i-dont-have/#comment-26056"
+                           target="_blank">architecture 2/3</a>
+                     </li>
+                     <li>système de routage des URLs pour créer des architectures REST</li>
+                     <li>modules XQuery pour interagir avec les requêtes et les réponses HTTP</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Développement des applications en XQuery</p>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <div class="illustration" style="text-align:center">
+                     <img src="images/logo-XRX.jpg" style="width:25%"/>
+                     <p class="legend">Sigle du wikibook <a href="http://en.wikibooks.org/wiki/XRX" target="_blank">Web Development with XRX</a>
+                     </p>
+                  </div>
+               </li>
+            </ul>
+            <ul class="block bullet">
+               <li>
+                  <p>XRX introduit par <a href="http://fr.slideshare.net/dmccreary/otug" target="_blank">Dan McCreary</a> en 2008</p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Bénéfices</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Pas de perte dans la chaine de développement</p>
+                  <ul class="sublist">
+                     <li>Plus de conversion entre XML et d'autres formats (JSON, etc.)</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Approche orientée modèle implicite</p>
+                  <ul class="sublist">
+                     <li>XML très facile pour produire des langages de haut niveau (DSL)</li>
+                     <li>Génération automatique de code</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Avec ou sans validation des données</p>
+                  <ul class="sublist">
+                     <li>Possiblité de travailler sans validation (<em>schema-less</em>)</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Limitations actuelles</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Complexité de la mise en oeuvre de XForms</p>
+                  <ul class="sublist">
+                     <li>N'a jamais été directement intégré dans les navigateurs web</li>
+                     <li>Conçu pour les formulaires et moins à l'aise avec les données moins régulières</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Interopérabilité partielle entre les différentes plateformes</p>
+                  <ul class="sublist">
+                     <li>Le groupe de travail W3C <a href="http://www.w3.org/community/expath/" target="_blank">EXPath Community Group</a> y pourvoit</li>
+                     <li>Publication de recommandations pour les modules XQuery</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Peu de framework de développement d'application</p>
+                  <ul class="sublist">
+                     <li>
+                        <a href="http://exquery.github.io/exquery/exquery-restxq-specification/restxq-1.0-specification.html"
+                           target="_blank">RESTXQ</a>
+                     </li>
+                     <li>
+                        <a href="http://expath.org/spec/webapp/editor" target="_blank">EXPath</a>
+                     </li>
+                     <li>
+                        <a href="http://www.orbeon.com/" target="_blank">Orbeon Forms</a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Nous avons décidé de créer notre propre framework : Oppidum</p>
+                  <p>
+                     <em>et de remplacer XForms par AXEL</em>
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Oppidum : Principes</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>L'application web est modélisée dans un unique fichier XML</p>
+                  <div class="illustration">
+                     <img src="images/oppidum-principles.png" style="width:100%"/>
+                     <p class="legend">le mapping associe chaque ressource REST de l'application avec un pipeline de rendu</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Oppidum : le Pipeline</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Maximum de 3 étapes</p>
+                  <ul class="sublist">
+                     <li>le modèle est un script XQuery</li>
+                     <li>la vue est une transformation XSLT</li>
+                     <li>l'épilogue est un script XQuery</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Exemple</p>
+                  <div class="illustration" style="text-align:center">
+                     <img src="images/oppidum-pipeline.png" style="width:30%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Oppidum : Modèle d'exécution</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>moteur d'exécution "2-temps"</p>
+                  <div class="illustration" style="text-align:center">
+                     <img src="images/oppidum-execution.png" style="width:75%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Oppidum : Gabarit de page</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Application du modèle de pipeline en 3 étages</p>
+                  <div class="illustration">
+                     <img src="images/oppidum-mesh.png" style="width:100%"/>
+                  </div>
+               </li>
+               <li>
+                  <p>Exemple de Gabarit</p>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml">&lt;html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:site="http://oppidoc.com/oppidum/site"&gt;
+  &lt;body&gt;
+    &lt;div id="article"&gt;
+      &lt;site:content/&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Exemple de flux</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Sortie du modèle</p>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml">&lt;Document&gt;
+  &lt;Parag&gt;Hello World&lt;/Parag&gt;
+&lt;/Document&gt;</pre>
+                  </div>
+               </li>
+               <li>
+                  <p>Sortie de la vue</p>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml">&lt;site:view&gt;
+  &lt;site:content&gt;
+    &lt;p&gt;Hello World&lt;/p&gt;
+  &lt;/site:content&gt;
+&lt;/site:view&gt;</pre>
+                  </div>
+               </li>
+               <li>
+                  <p>Sortie de l'épilogue</p>
+                  <div class="mask">
+                     <div class="commands">
+                        <button data-command="ace">Ace</button>
+                        <button data-command="text-in">T▲</button>
+                        <button data-command="text-out">T▼</button>
+                     </div>
+                     <pre data-language="xml">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;body&gt;
+    &lt;div id="article"&gt;
+      &lt;p&gt;Hello World&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Une application d'édition en 6 pipelines</h1>
+         <div class="region" style="float:left;width:49%">
+            <ul class="block bullet">
+               <li>
+                  <p>Édition d'article (lien <a href="http://localhost:9080/exist/projets/oppidoc/articles/xml-london"
+                        target="_blank">local</a>)</p>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="float:left;width:49%">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <a class="e-link" href="http://www.oppidoc.fr/articles/xml-london" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/application-article.png" style="width:50%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="region" style="clear:left">
+            <ul class="block none">
+               <li>
+                  <div class="illustration">
+                     <img src="images/oppidum-editor.png" style="width:100%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Réalisations</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Édition / publication</p>
+                  <ul class="sublist">
+                     <li>chaine de traitement XML complète sur le Web (<em>Web2Print</em>)</li>
+                     <li>réduction du coût de production d'une newsletter papier / digitale</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Catalogues / annuaires</p>
+                  <ul class="sublist">
+                     <li>saisie contrôlée pour respecter une charte graphique</li>
+                     <li>fonctionnalités additionnelles standards ou sur-mesure suivant les besoins (formulaires d'inscription et génération des badges ou des listes d'émargement, gestion de petites annonces modérées, etc.)</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Dématérialisation de processus</p>
+                  <ul class="sublist">
+                     <li>exploitation complète de la valeur du contenu des documents pour des processus métiers dans une entreprise</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Focus</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Éditeur de la <a href="http://www.platinn.ch/platinn/Publications/focus" target="_blank">newsletter Focus</a> de la plateforme innovation platinn</p>
+                  <ul class="sublist">
+                     <li>chaine éditoriale complète pour l'impression (diffusion papier 2000 exemplaires)</li>
+                     <li>conversion HTML + CSS vers PDF avec <a href="http://www.princexml.com/" target="_blank">Prince</a> pour tirage offset 2 couleurs</li>
+                  </ul>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/application-focus.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/application-focus.png" style="width:60%"/>
+                     <p class="legend">démonstration le jour de la présentation</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Alliance</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Site web de l'<a href="http://www.alliance-tt.ch/" target="_blank">Association Alliance</a>
+                  </p>
+                  <ul class="sublist">
+                     <li>catalogue de programmes de manifestations et de fiches projets</li>
+                     <li>chaine éditoriale avec gestion des inscriptions jusqu'à l'impression des badges</li>
+                  </ul>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/application-alliance.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/application-alliance.png" style="width:50%"/>
+                     <p class="legend">démonstration le jour de la présentation</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>UAP</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Site web de l'<a href="http://www.uniondesartisansdupatrimoine.be/accueil" target="_blank">Union des Artisans du Patrimoine de Belgique</a>
+                  </p>
+                  <ul class="sublist">
+                     <li>catalogue de membres</li>
+                     <li>gestion de petites annonces modérées réservées aux membres</li>
+                  </ul>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/application-uap.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/application-uap.png" style="width:50%"/>
+                     <p class="legend">démonstration le jour de la présentation</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>PSE</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Anuaire du <a href="http://societes.parc-scientifique.ch/" target="_blank">Parc Scientifique de l'EPFL</a>
+                  </p>
+                  <ul class="sublist">
+                     <li>catalogue de startups</li>
+                     <li>site et contenu multilingues et moteur de recherche (Apache Lucene)</li>
+                     <li>génération de courriers de relance pour inciter les entreprises à rédiger</li>
+                     <li>exportation JSON vers un réseau d'écrans d'affichage dans les batiments</li>
+                  </ul>
+               </li>
+            </ul>
+            <ul class="block none">
+               <li>
+                  <div class="illustration" style="text-align:center">
+                     <a class="e-link" href="images/application-pse.png" target="_blank">
+                        <img src="icons/external_link.png"/>
+                     </a>
+                     <img src="images/application-pse.png" style="width:50%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Dématérialisation de processus</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Applications métiers</p>
+                  <ul class="sublist">
+                     <li>Nombreux modèles de documents</li>
+                     <li>Documents hybrides texte et formulaires</li>
+                     <li>Champs calculés et champs contraints</li>
+                     <li>Formulaires purs (ex: masque de recherche)</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>Modèles de données semi-structurées parfaitement adaptés</p>
+                  <ul class="sublist">
+                     <li>Attention à la duplication des données</li>
+                     <li>Notion de transclusion (copies mortes ou vivantes)</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>L'extension de la librairie AXEL est en cours pour couvrir les besoins liés aux formulaires</p>
+                  <p>
+                     <em>Exemple :</em>
+                  </p>
+                  <div class="illustration" style="text-align:center">
+                     <img src="images/champs-calcules.png" style="width:80%"/>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="slide">
+         <h1>Conclusion</h1>
+         <div class="region">
+            <ul class="block bullet">
+               <li>
+                  <p>Oppidoc : de la recherche académique aux produits</p>
+                  <ul class="sublist">
+                     <li>3 ans pour innover dans la cadre de projets université - industrie (2008 - 2010)</li>
+                     <li>3 ans pour industrialiser avec l'aide de clients pioneers (2011 - 2013)</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>XML n'a jamais été aussi simple à mettre en oeuvre</p>
+                  <ul class="sublist">
+                     <li>La saisie de documents structurés n'est plus un verrou</li>
+                     <li>Les technologies de l'ingénierie documentaire (XSLT, XPath, XQuery) peuvent servir à créer une large gamme d'applications</li>
+                  </ul>
+               </li>
+               <li>
+                  <p>La nouvelle pile de développement XRX est en train de devenir une alternative aux langages procéduraux</p>
+                  <ul class="sublist">
+                     <li>Poussée par la vague noSQL et le Big Data (<em>schema-less database</em>)</li>
+                     <li>Idéale partout où un mélange de données structurées et semi-structurées est en jeu</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </body>
+</html>

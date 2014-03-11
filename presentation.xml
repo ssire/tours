@@ -1,0 +1,2177 @@
+<SlideShow>
+  <Slides>
+    <Slide>
+      <Title>Présentation</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Title>Nouvelles méthodes de développement web</Title>
+            <Title>avec les technologies centrées document</Title>
+            <Para>
+              <Fragment FragmentKind="important">du projet européen Palette à la création d'Oppidoc</Fragment>
+            </Para>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Para>
+              <Fragment>Par Stéphane Sire</Fragment>
+            </Para>
+            <Para>
+              <Link>
+                <LinkText>www.oppidoc.fr</LinkText>
+                <LinkRef>http://www.oppidoc.fr/</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Para>
+              <Fragment>Présentation donnée le 19 février 2014 aux </Fragment>
+              <Link>
+                <LinkText>journées des professionnels du numérique</LinkText>
+                <LinkRef>http://cesr.univ-tours.fr/actualites/journee-des-professionnels-les-metiers-du-numerique-375710.kjsp?RH=CESR_FR</LinkRef>
+              </Link>
+              <Fragment> organisée par le </Fragment>
+              <Link>
+                <LinkText>CESR</LinkText>
+                <LinkRef>http://cesr.univ-tours.fr/</LinkRef>
+              </Link>
+              <Fragment> de Tours</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Para>
+              <Fragment FragmentKind="emphasize">Remerciements</Fragment>
+              <Fragment> :</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>33</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/logo-epfl.gif">
+              <Meta>
+                <Width>75</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+          <Item>
+            <Para>
+              <Link>
+                <LinkText>MEDIA research group</LinkText>
+                <LinkRef>http://media.epfl.ch</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>33</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/logo-inria.png">
+              <Meta>
+                <Width>75</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+          <Item>
+            <Para>
+              <Link>
+                <LinkText>Projet WAM</LinkText>
+                <LinkRef>http://wam.inrialpes.fr/</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>33</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/logo-tudor.png">
+              <Meta>
+                <Width>75</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+          <Item>
+            <Para>
+              <Link>
+                <LinkText>Centre de recherche Henri Tudor</LinkText>
+                <LinkRef>http://www.tudor.lu/fr</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Partie I</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Title>Édition des documents</Title>
+            <Title>Le navigateur comme plateforme d'édition</Title>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Document structuré</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Mise en forme de l'information suivant une structure</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>La structure dépend du support ou de l'utilisation</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>49</Width>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Structure(s) Physiques</Fragment>
+            </Para>
+            <Illustration Source="images/document-physique.png">
+              <Meta>
+                <Width>100</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>49</Width>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Structure(s) Logiques</Fragment>
+            </Para>
+            <Illustration Source="images/document-logique.png">
+              <Meta>
+                <Width>100</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Clear>left</Clear>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Para>
+              <Fragment>“</Fragment>
+              <Fragment FragmentKind="emphasize">On the left, what browsers see. On the right, what humans see. Can we bridge the gap so browsers see more of what we see?</Fragment>
+              <Fragment>”</Fragment>
+            </Para>
+            <Para>
+              <Fragment>Source : </Fragment>
+              <Link>
+                <LinkText>RDFa 1.1 Primer Rich Structured Data Markup for Web Documents</LinkText>
+                <LinkRef>http://www.w3.org/TR/xhtml-rdfa-primer/</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Sur le web...</Title>
+      <Region>
+        <Meta>
+          <Clear>left</Clear>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Les documents sont représentés au niveau de la typographie et de la mise en forme</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>HTML</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Pourtant ils contiennent des données structurées</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>32</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/site-assemblee-nationale.png">
+              <Legend>
+                <Link>
+                  <LinkText>question au gouvernement</LinkText>
+                  <LinkRef>http://questions.assemblee-nationale.fr/q14/14-14884QE.htm</LinkRef>
+                </Link>
+              </Legend>
+              <Meta>
+                <Width>100</Width>
+                <Link>images/site-assemblee-nationale.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>32</Width>
+          <Link>images/site-chatellerault-menus.png</Link>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/site-chatellerault-menus.png">
+              <Legend>
+                <Link>
+                  <LinkText>menu de cantine</LinkText>
+                  <LinkRef>http://www.ville-chatellerault.fr/a-votre-service/famille/restauration-scolaire/menus</LinkRef>
+                </Link>
+              </Legend>
+              <Meta>
+                <Width>100</Width>
+                <Link>images/site-chatellerault-menus.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>32</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/site-fourviere-festival.png">
+              <Legend>
+                <Link>
+                  <LinkText>agenda culturel</LinkText>
+                  <LinkRef>http://69.agendaculturel.fr/festival/nuits-de-fourviere-2014.html</LinkRef>
+                </Link>
+              </Legend>
+              <Meta>
+                <Width>100</Width>
+                <Link>images/site-fourviere-festival.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Clear>left</Clear>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Notion de </Fragment>
+              <Fragment FragmentKind="important">document semi-structuré</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Encoder les documents</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Title>XML</Title>
+            <Para>
+              <Fragment>"XML is about creating documents in which the content is delimited, or set apart, by tags that explain the meaning of each piece of content. With XML, documents can become a source of information as rich as a database, enabling search, processing, and reuse."</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Para>
+              <Fragment FragmentKind="emphasize">Jean Paoli</Fragment>
+              <Fragment>, </Fragment>
+              <Fragment FragmentKind="emphasize">co-éditeur de la recommandation XML 1.0</Fragment>
+              <Fragment> (</Fragment>
+              <Link>
+                <LinkText>source</LinkText>
+                <LinkRef>http://office.microsoft.com/en-us/infopath-help/jean-paoli-on-microsoft-office-infopath-2003-HA001136140.aspx</LinkRef>
+              </Link>
+              <Fragment>)</Fragment>
+            </Para>
+          </Item>
+        </Block>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Extensible Markup Language (XML) 1.0 - Recommendation W3C</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>1998 : </Fragment>
+                <Link>
+                  <LinkText>Première édition</LinkText>
+                  <LinkRef>http://www.w3.org/TR/1998/REC-xml-19980210</LinkRef>
+                </Link>
+              </Item>
+              <Item>
+                <Fragment>2008 : </Fragment>
+                <Link>
+                  <LinkText>Cinquième édition</LinkText>
+                  <LinkRef>http://www.w3.org/TR/REC-xml/</LinkRef>
+                </Link>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Exemple Niveau Physique</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Code>
+              <Source>&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;La « neuro-amélioration » passée au crible du comité d’éthique&lt;/h1&gt;
+    &lt;div class="Subheadline"&gt;
+      &lt;p&gt;Par Hervé Morin&lt;/p&gt;
+      &lt;p&gt;&lt;i&gt;Mis à jour le 12.02.2014 à 16h59&lt;/i&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;Dans son avis n° 122, rendu public mercredi 12 février, le Comité
+       consultatif national d’éthique (CCNE) examine les enjeux du « recours
+      aux techniques biomédicales en vue de “neuro-amélioration” chez la
+      personne non malade ». De quoi s’agit-il ? De l’emploi de médicaments
+      (anxiolytiques, antidépresseurs, stimulants cognitifs…) ou de la
+      stimulation cérébrale transcrânienne pour améliorer les performances
+      cognitives de tout un chacun.&lt;/p&gt;
+      &lt;p&gt;&lt;a href="http://www.lemonde.fr/2011/12/16/dasc.html"&gt;Des aimants 
+      pour soigner le cerveau&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/html&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+                <Size>16px</Size>
+              </Meta>
+            </Code>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Exemple Niveau Logique</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Code>
+              <Source>&lt;Document&gt;
+  &lt;Title&gt;La « neuro-amélioration » passée au crible du comité d’éthique&lt;/Title&gt;
+  &lt;Author&gt;Hervé Morin&lt;/Author&gt;
+  &lt;Publication&gt;
+    &lt;Date&gt;12/02/2014&lt;/Date&gt;
+    &lt;Time&gt;16:59&lt;/Time&gt;
+  &lt;/Publication&gt;
+  &lt;Article&gt;
+    &lt;Para&gt;Dans son avis n° 122, rendu public mercredi 12 février, le Comité
+     consultatif national d’éthique (CCNE) examine les enjeux du « recours aux
+     techniques biomédicales en vue de “neuro-amélioration” chez la personne
+     non malade »...&lt;/Para&gt;
+  &lt;/Article&gt;
+  &lt;Link&gt;
+    &lt;Target&gt;http://www.lemonde.fr/2011/12/16/dasc.html&lt;/Target&gt;
+    &lt;Anchor&gt;Des aimants pour soigner le cerveau&lt;/Anchor&gt;
+  &lt;/Link&gt;
+&lt;/Document&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+                <Size>16px</Size>
+              </Meta>
+            </Code>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Pourquoi structurer ?</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment FragmentKind="important">Recherche</Fragment>
+            </Para>
+            <Para>
+              <Fragment>Ex: </Fragment>
+              <Fragment FragmentKind="emphasize">retrouver les questions posées au gouvernement à l'assemblée nationale entre mai et décembre 2013 sur la sécurité des données ou le droit à la vie privée </Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment FragmentKind="important">Réutilisation</Fragment>
+            </Para>
+            <Para>
+              <Fragment>Ex: </Fragment>
+              <Fragment FragmentKind="emphasize">créer le rapport final sur le projet en combinant la section sur l'étude de cas de la demande de de financement, le document sur la décision de financement, et la section sur l'analyse des questionnaires de satisfaction sur le document de retour d'expérience, générer un eBook et un PDF</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment FragmentKind="important">Capitalisation</Fragment>
+            </Para>
+            <Para>
+              <Fragment>Ex: </Fragment>
+              <Fragment FragmentKind="emphasize">analyser l'évolution des menus de la cantine sur ces 3 dernières années, vérifier l'équilibre entre les viandes et les poissons</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Cas particuliers des documents </Fragment>
+              <Fragment FragmentKind="emphasize">exécutables</Fragment>
+            </Para>
+            <Para>
+              <Fragment>Certains documents sont de nature à être traité informatiquement pour générer des applications ou piloter des processus :</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Spécifications de tests, questionnaires, Quiz, etc.</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Spécifications de logiciels</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Configurations d'équipements</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Notre projet initial</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Le projet FP6 Palette</Fragment>
+            </Para>
+            <Para>
+              <Fragment FragmentKind="emphasize">“Développer des services pour l'apprentissage dans les communautés de pratiques”</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Extrait du site Cordis</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Strategic objective: Technology-enhanced Learning</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Start date: 1 February 2006</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Duration: 36 months</Fragment>
+              </Item>
+              <Item>
+                <Fragment>EU funding:  6 000 000</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Number of partners: 14</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Project coordinator: GEIE ERCIM, Sophia Antipolis, France</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Scientific coordinator: Christine Vanoirbeek, EPFL, Suisse</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Lien avec l'édition de documents</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Les communautés de pratique produisent des artefacts</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>En particulier des documents</Fragment>
+            </Para>
+            <Illustration Source="images/rapport-observation-classe.png">
+              <Legend>
+                <Fragment>Exemple de rapport d'observation d'une classe</Fragment>
+              </Legend>
+              <Meta>
+                <Width>60</Width>
+                <Link>images/rapport-observation-classe.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Sous-utilisation des documents</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Les documents sont créés avec Microsoft Word ou autres éditeurs orientés page</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Les données sont très peu exploitées</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>pas ou peu de réutilisation (copier / coller)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>pas d'outils de recherche</Fragment>
+              </Item>
+              <Item>
+                <Fragment>obstacle à la capitalisation des connaissances</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment FragmentKind="important">Objectif</Fragment>
+              <Fragment> :  encourager les communautés à structurer leurs documents</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>contraindre la saisie sans l’alourdir</Fragment>
+              </Item>
+              <Item>
+                <Fragment>avec une solution facile à mettre en oeuvre pour que les communautés puissent créer leurs modèles de documents</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>La solution de L'INRIA</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Saisie contrainte par un template de document défini dans un langage </Fragment>
+              <Link>
+                <LinkText>XTiger</LinkText>
+                <LinkRef>http://www.w3.org/Amaya/Templates/XTiger-spec.html</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Le langage de spécification est de complexité moindre que </Fragment>
+              <Link>
+                <LinkText>XML Schema</LinkText>
+                <LinkRef>http://www.w3.org/XML/Schema</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Fonctionnalité intégrée dans le navigateur </Fragment>
+              <Link>
+                <LinkText>Amaya</LinkText>
+                <LinkRef>http://www.w3.org/Amaya/Templates/Overview.html</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>49</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/amaya-xtiger-example1.png">
+              <Meta>
+                <Width>100</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>49</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/amaya-xtiger-example2.png">
+              <Meta>
+                <Width>100</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Clear>left</Clear>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Le navigateur </Fragment>
+              <Link>
+                <LinkText>Amaya</LinkText>
+                <LinkRef>http://www.w3.org/Amaya/</LinkRef>
+              </Link>
+              <Fragment> sert également d'éditeur de template XTiger</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Alternative Formulaire</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Structures de données "plates" (clefs - valeurs)</Fragment>
+            </Para>
+            <Illustration Source="images/recetteMarmitonorg.png">
+              <Meta>
+                <Width>50</Width>
+                <Alignment>center</Alignment>
+                <Link>images/recetteMarmitonorg.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Alternative Wiki</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Modèle de sortie limité à HTML</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Syntaxe wiki rébarbative</Fragment>
+            </Para>
+            <Illustration Source="images/wikipediaFragment.png">
+              <Meta>
+                <Width>80</Width>
+                <Alignment>center</Alignment>
+                <Link>images/wikipediaFragment.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Alternative Éditeur d'arbre</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Pour utilisateurs avertis</Fragment>
+            </Para>
+            <Illustration Source="images/hamlet.png">
+              <Legend>
+                <Fragment>Exemple Oxygen Editor</Fragment>
+              </Legend>
+              <Meta>
+                <Width>80</Width>
+                <Alignment>center</Alignment>
+                <Link>images/hamlet.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Alternative WYSIWYG</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Saisie contrainte par un schéma XML</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Nécessite des compétences pointues pour créer un éditeur</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/xopus-recipe.png">
+              <Legend>
+                <Fragment>Exemple </Fragment>
+                <Link>
+                  <LinkText>Xopus</LinkText>
+                  <LinkRef>http://www.xopus.com</LinkRef>
+                </Link>
+                <Fragment> vue WYSIWYG</Fragment>
+              </Legend>
+              <Meta>
+                <Width>60</Width>
+                <Alignment>center</Alignment>
+                <Link>images/xopus-recipe.png</Link>
+              </Meta>
+            </Illustration>
+            <Illustration Source="images/xopus-recipe-xml.png">
+              <Legend>
+                <Fragment>Vue source XML</Fragment>
+              </Legend>
+              <Meta>
+                <Width>70</Width>
+                <Alignment>center</Alignment>
+                <Link>images/xopus-recipe-xml.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Barrières d'adoption à Amaya</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>L'installation d'une nouvelle application</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>La concurrence avec les navigateurs récents</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>La concurrence avec les outils bureautiques WYSISYG</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>La surexposition de concepts trop bas niveau</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>&lt;balise&gt;</Fragment>
+              </Item>
+              <Item>
+                <Fragment>@attribut</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>L'idée germe...</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Contexte 2008 : montée en puissance de Javascript dans les navigateurs web</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment FragmentKind="important">Porter XTiger en Javascript dans un navigateur Web</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>pour éviter d'avoir à installer un navigateur spécifique</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Premiers prototypes prometteurs avec des stagiaires</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Des interprétations divergentes sur la spécification XTiger entrainent l'écriture d'une nouvelle spécification</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Link>
+                  <LinkText>XTiger XML</LinkText>
+                  <LinkRef>http://ssire.github.io/xtiger-xml-spec/</LinkRef>
+                </Link>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>La librairie s'appellera </Fragment>
+              <Fragment FragmentKind="important">AXEL</Fragment>
+              <Fragment> (Adaptable XML Editing Library)</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>La librairie AXEL</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Tout en Javascript sans utiliser d'autres librairies (Prototype, jQuery, etc.)</Fragment>
+            </Para>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/cv-haddock.png">
+              <Legend>
+                <Fragment>éditeur de démonstration pour tester les templates de documents</Fragment>
+              </Legend>
+              <Meta>
+                <Width>80</Width>
+                <Alignment>center</Alignment>
+                <Link>http://ssire.github.io/axel/editor/editor.xhtml</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Fonctionnement de la librairie AXEL</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/axel-overview.png">
+              <Meta>
+                <Width>100</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Le langage XTiger XML</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/axel-millefeuille.png">
+              <Meta>
+                <Width>80</Width>
+                <Alignment>center</Alignment>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Template XTiger XML minimal</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Code>
+              <Source>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xt="http://ns.inria.org/xtiger"&gt;
+&lt;head&gt;
+ &lt;xt:head label="Document"&gt;
+   &lt;xt:component name="t_friend"&gt; 
+     &lt;li&gt;&lt;xt:use types="text"&gt;nom&lt;/xt:use&gt;&lt;xt:menu-marker/&gt;&lt;/li&gt;
+   &lt;/xt:component&gt;
+ &lt;/xt:head&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;h1&gt;Liste des invités :&lt;/h1&gt;
+ &lt;ul&gt; 
+   &lt;xt:repeat minOccurs="0" maxOccurs="*" label="Invites"&gt;
+     &lt;xt:use types="t_friend" label="Nom"/&gt;
+   &lt;/xt:repeat&gt;
+ &lt;/ul&gt;
+&lt;/body&gt; 
+&lt;/html&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+              </Meta>
+            </Code>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Exemples de document généré :</Fragment>
+            </Para>
+            <Code>
+              <Source>&lt;Document&gt;
+  &lt;Invites&gt;
+    &lt;Nom&gt;Charlie&lt;/Nom&gt;
+    &lt;Nom&gt;Oscar&lt;Nom&gt;
+  &lt;/Invites&gt;
+&lt;/Document&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+              </Meta>
+            </Code>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Le voir </Fragment>
+              <Link>
+                <LinkText>en action</LinkText>
+                <LinkRef>samples/invites.xhtml</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Utilisation de AXEL</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>1 fichier Javascript (axel.js) et 1 fichier css à inclure (axel.css)</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>+ 1 répertoire de resources (bundles) à mettre à disposition</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>3 cas pour éditer un document dans une page</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>La page est déjà un template XTiger XML</Fragment>
+              </Item>
+              <Item>
+                <Fragment>La page contient un élément </Fragment>
+                <Fragment FragmentKind="verbatim">div</Fragment>
+                <Fragment> dans lequel on va charger un template XTiger XML séparé</Fragment>
+              </Item>
+              <Item>
+                <Fragment>La page contient un élément </Fragment>
+                <Fragment FragmentKind="verbatim">iframe</Fragment>
+                <Fragment> qui contient le template XTiger XML séparé</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Fonctions pour</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Lire un document XML et de le charger dans l'éditeur</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Linéariser le contenu en cours d'édition pour l'envoyer sur un serveur</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Opérations accessibles via un objet </Fragment>
+              <Fragment FragmentKind="verbatim">$axel</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Familier pour les développeurs habitués à jQuery</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>API Javascript</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Extrait de template</Fragment>
+            </Para>
+            <Code>
+              <Source>&lt;div id="editor"&gt;
+  &lt;p&gt;
+    &lt;xt:use types="text" label="Text"&gt;Hello&lt;/xt:use&gt;
+    &lt;xt:use types="text" label="Text"&gt;World&lt;/xt:use&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+              </Meta>
+            </Code>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Manipulation de son contenu XML avec </Fragment>
+              <Fragment FragmentKind="verbatim">$axel(selecteur)</Fragment>
+            </Para>
+            <Code>
+              <Source>&gt;&gt;&gt; $axel('#editor').transform()
+&gt;&gt;&gt; $axel('#editor').xml()
+"&lt;data&gt;
+  &lt;Text&gt;Hello&lt;/Text&gt;
+  &lt;Text&gt;World&lt;/Text&gt;
+&lt;/data&gt;
+"
+&gt;&gt;&gt; $axel('#editor').text()
+"Hello World"</Source>
+              <Meta>
+              </Meta>
+            </Code>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>L'idée se développe...</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>2009 : à l'issue du projet l'un des partenaires propose un défi pour continuer</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Reproduire un document Word de spécification de questionnaires</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Épargner la phase de conversion en XML</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>2010 : projet CTI (~ ANR) pour travailler 1 an avec la startup Madeinlocal</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Intégration dans un environnement de production Ruby on Rails</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Nouvelles questions soulevées par la pratique (évolution de schémas)</Fragment>
+              </Item>
+              <Item>
+                <Link>
+                  <LinkText>Authoring XML all the Time, Everywhere and by Everyone</LinkText>
+                  <LinkRef>http://www.oppidoc.fr/articles/xml-prague</LinkRef>
+                </Link>
+                <Fragment> avec V. Quint, C. Roisin et C. Vanoirbeek, présenté à XML Prague 2010</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Démonstrations</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Un éditeur de </Fragment>
+              <Link>
+                <LinkText>Quizz</LinkText>
+                <LinkRef>http://www.oppidoc.fr/demos/quizz</LinkRef>
+              </Link>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Cette présentation a été créée avec un template XTiger XML</Fragment>
+            </Para>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Voir sur les sites de diffusion de la librairie</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Éditeur de démonstration AXEL : </Fragment>
+                <Link>
+                  <LinkText>ssire.github.io/axel/editor/editor.xhtml</LinkText>
+                  <LinkRef>http://ssire.github.io/axel/editor/editor.xhtml</LinkRef>
+                </Link>
+              </Item>
+              <Item>
+                <Fragment>Éditeur de démonstration AXEL-FORMS : </Fragment>
+                <Link>
+                  <LinkText>ssire.github.io/axel-forms/editor/editor.xhtml</LinkText>
+                  <LinkRef>http://ssire.github.io/axel-forms/editor/editor.xhtml</LinkRef>
+                </Link>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Notes</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Importance de la license open source</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Condition pour faire vivre le projet</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Très nombreuses licences</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>GPL, BSD, MIT, Apache, etc.</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Se distinguent par le degré de </Fragment>
+                <Fragment FragmentKind="emphasize">contagion</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Gestion d'une communauté open source</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Dépots de code</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Listes de diffusion</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Partie II</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Title>Développement complet d'applications web</Title>
+            <Title>La pile XML</Title>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Transformation des technos documents</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>À l'origine du texte mis en forme (</Fragment>
+              <Fragment FragmentKind="important">XML</Fragment>
+              <Fragment>) pour</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>servir de source unique (</Fragment>
+                <Fragment FragmentKind="emphasize">single source</Fragment>
+                <Fragment>)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>pour publier sur plusieurs canaux (</Fragment>
+                <Fragment FragmentKind="emphasize">cross-media publishing</Fragment>
+                <Fragment>)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>avec l'aide de </Fragment>
+                <Fragment FragmentKind="important">langages de transformation</Fragment>
+                <Fragment> (</Fragment>
+                <Fragment FragmentKind="important">CSS, XSLT</Fragment>
+                <Fragment>)</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Puis les documents textuels deviennent de véritables bases de données</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>pour supporter des traitements sémantiques</Fragment>
+              </Item>
+              <Item>
+                <Fragment>avec l'aide de  </Fragment>
+                <Fragment FragmentKind="important">langages d'interrogation</Fragment>
+                <Fragment> (</Fragment>
+                <Fragment FragmentKind="important">XPath, XQuery</Fragment>
+                <Fragment>)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>les catalogues de données deviennent des collections de documents</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Finalement les bases de données XML deviennent des plateformes de développement web...</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Plateformes de développement</Title>
+      <Region>
+        <Meta>
+          <Clear>left</Clear>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Suivant les cas</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Bases de données natives XML</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Moteurs XQuery avec des connecteurs pour différents systèmes de stockage</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>49</Width>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Projet open source </Fragment>
+              <Link>
+                <LinkText>eXist-DB</LinkText>
+                <LinkRef>http://exist-db.org/</LinkRef>
+              </Link>
+            </Para>
+            <Illustration Source="images/existdb.gif">
+              <Meta>
+                <Width>60</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>49</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/eXist-book.jpg">
+              <Legend>
+                <Fragment>Livre en cours de parution chez O'Reilly</Fragment>
+              </Legend>
+              <Meta>
+                <Width>40</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Clear>left</Clear>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Alternatives ...</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Link>
+                  <LinkText>MarcLogic</LinkText>
+                  <LinkRef>MarkLogic</LinkRef>
+                </Link>
+              </Item>
+              <Item>
+                <Link>
+                  <LinkText>BaseX</LinkText>
+                  <LinkRef>http://basex.org/</LinkRef>
+                </Link>
+              </Item>
+              <Item>
+                <Link>
+                  <LinkText>Zorba</LinkText>
+                  <LinkRef>http://www.zorba.io/</LinkRef>
+                </Link>
+              </Item>
+              <Item>
+                <Link>
+                  <LinkText>Qizx</LinkText>
+                  <LinkRef>http://www.axyana.com/qizxopen/</LinkRef>
+                </Link>
+                <Fragment> (aquis récemment par Qualcomm)</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Architecture XRX</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Saisie et présentation des données avec XForms</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>dans notre cas remplacé par AXEL</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Intégration du serveur web avec la base de données</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Link>
+                  <LinkText>architecture 2/3</LinkText>
+                  <LinkRef>http://xquerywebappdev.wordpress.com/2011/11/18/node-js-is-good-for-solving-problems-i-dont-have/#comment-26056</LinkRef>
+                </Link>
+              </Item>
+              <Item>
+                <Fragment>système de routage des URLs pour créer des architectures REST</Fragment>
+              </Item>
+              <Item>
+                <Fragment>modules XQuery pour interagir avec les requêtes et les réponses HTTP</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Développement des applications en XQuery</Fragment>
+            </Para>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/logo-XRX.jpg">
+              <Legend>
+                <Fragment>Sigle du wikibook </Fragment>
+                <Link>
+                  <LinkText>Web Development with XRX</LinkText>
+                  <LinkRef>http://en.wikibooks.org/wiki/XRX</LinkRef>
+                </Link>
+              </Legend>
+              <Meta>
+                <Width>25</Width>
+                <Alignment>center</Alignment>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>XRX introduit par </Fragment>
+              <Link>
+                <LinkText>Dan McCreary</LinkText>
+                <LinkRef>http://fr.slideshare.net/dmccreary/otug</LinkRef>
+              </Link>
+              <Fragment> en 2008</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Bénéfices</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Pas de perte dans la chaine de développement</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Plus de conversion entre XML et d'autres formats (JSON, etc.)</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Approche orientée modèle implicite</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>XML très facile pour produire des langages de haut niveau (DSL)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Génération automatique de code</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Avec ou sans validation des données</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Possiblité de travailler sans validation (</Fragment>
+                <Fragment FragmentKind="emphasize">schema-less</Fragment>
+                <Fragment>)</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Limitations actuelles</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Complexité de la mise en oeuvre de XForms</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>N'a jamais été directement intégré dans les navigateurs web</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Conçu pour les formulaires et moins à l'aise avec les données moins régulières</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Interopérabilité partielle entre les différentes plateformes</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Le groupe de travail W3C </Fragment>
+                <Link>
+                  <LinkText>EXPath Community Group</LinkText>
+                  <LinkRef>http://www.w3.org/community/expath/</LinkRef>
+                </Link>
+                <Fragment> y pourvoit</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Publication de recommandations pour les modules XQuery</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Peu de framework de développement d'application</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Link>
+                  <LinkText>RESTXQ</LinkText>
+                  <LinkRef>http://exquery.github.io/exquery/exquery-restxq-specification/restxq-1.0-specification.html</LinkRef>
+                </Link>
+              </Item>
+              <Item>
+                <Link>
+                  <LinkText>EXPath</LinkText>
+                  <LinkRef>http://expath.org/spec/webapp/editor</LinkRef>
+                </Link>
+              </Item>
+              <Item>
+                <Link>
+                  <LinkText>Orbeon Forms</LinkText>
+                  <LinkRef>http://www.orbeon.com/</LinkRef>
+                </Link>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Nous avons décidé de créer notre propre framework : Oppidum</Fragment>
+            </Para>
+            <Para>
+              <Fragment FragmentKind="emphasize">et de remplacer XForms par AXEL</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Oppidum : Principes</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>L'application web est modélisée dans un unique fichier XML</Fragment>
+            </Para>
+            <Illustration Source="images/oppidum-principles.png">
+              <Legend>
+                <Fragment>le mapping associe chaque ressource REST de l'application avec un pipeline de rendu</Fragment>
+              </Legend>
+              <Meta>
+                <Width>100</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Oppidum : le Pipeline</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Maximum de 3 étapes</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>le modèle est un script XQuery</Fragment>
+              </Item>
+              <Item>
+                <Fragment>la vue est une transformation XSLT</Fragment>
+              </Item>
+              <Item>
+                <Fragment>l'épilogue est un script XQuery</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Exemple</Fragment>
+            </Para>
+            <Illustration Source="images/oppidum-pipeline.png">
+              <Meta>
+                <Width>30</Width>
+                <Alignment>center</Alignment>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Oppidum : Modèle d'exécution</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>moteur d'exécution "2-temps"</Fragment>
+            </Para>
+            <Illustration Source="images/oppidum-execution.png">
+              <Meta>
+                <Width>75</Width>
+                <Alignment>center</Alignment>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Oppidum : Gabarit de page</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Application du modèle de pipeline en 3 étages</Fragment>
+            </Para>
+            <Illustration Source="images/oppidum-mesh.png">
+              <Meta>
+                <Width>100</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Exemple de Gabarit</Fragment>
+            </Para>
+            <Code>
+              <Source>&lt;html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:site="http://oppidoc.com/oppidum/site"&gt;
+  &lt;body&gt;
+    &lt;div id="article"&gt;
+      &lt;site:content/&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+              </Meta>
+            </Code>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Exemple de flux</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Sortie du modèle</Fragment>
+            </Para>
+            <Code>
+              <Source>&lt;Document&gt;
+  &lt;Parag&gt;Hello World&lt;/Parag&gt;
+&lt;/Document&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+              </Meta>
+            </Code>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Sortie de la vue</Fragment>
+            </Para>
+            <Code>
+              <Source>&lt;site:view&gt;
+  &lt;site:content&gt;
+    &lt;p&gt;Hello World&lt;/p&gt;
+  &lt;/site:content&gt;
+&lt;/site:view&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+              </Meta>
+            </Code>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Sortie de l'épilogue</Fragment>
+            </Para>
+            <Code>
+              <Source>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;body&gt;
+    &lt;div id="article"&gt;
+      &lt;p&gt;Hello World&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</Source>
+              <Meta>
+                <Language>xml</Language>
+              </Meta>
+            </Code>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Une application d'édition en 6 pipelines</Title>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>49</Width>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Édition d'article (lien </Fragment>
+              <Link>
+                <LinkText>local</LinkText>
+                <LinkRef>http://localhost:9080/exist/projets/oppidoc/articles/xml-london</LinkRef>
+              </Link>
+              <Fragment>)</Fragment>
+            </Para>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Float>left</Float>
+          <Width>49</Width>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/application-article.png">
+              <Meta>
+                <Width>50</Width>
+                <Link>http://www.oppidoc.fr/articles/xml-london</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+      <Region>
+        <Meta>
+          <Clear>left</Clear>
+        </Meta>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/oppidum-editor.png">
+              <Meta>
+                <Width>100</Width>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Réalisations</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Édition / publication</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>chaine de traitement XML complète sur le Web (</Fragment>
+                <Fragment FragmentKind="emphasize">Web2Print</Fragment>
+                <Fragment>)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>réduction du coût de production d'une newsletter papier / digitale</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Catalogues / annuaires</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>saisie contrôlée pour respecter une charte graphique</Fragment>
+              </Item>
+              <Item>
+                <Fragment>fonctionnalités additionnelles standards ou sur-mesure suivant les besoins (formulaires d'inscription et génération des badges ou des listes d'émargement, gestion de petites annonces modérées, etc.)</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Dématérialisation de processus</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>exploitation complète de la valeur du contenu des documents pour des processus métiers dans une entreprise</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Focus</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Éditeur de la </Fragment>
+              <Link>
+                <LinkText>newsletter Focus</LinkText>
+                <LinkRef>http://www.platinn.ch/platinn/Publications/focus</LinkRef>
+              </Link>
+              <Fragment> de la plateforme innovation platinn</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>chaine éditoriale complète pour l'impression (diffusion papier 2000 exemplaires)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>conversion HTML + CSS vers PDF avec </Fragment>
+                <Link>
+                  <LinkText>Prince</LinkText>
+                  <LinkRef>http://www.princexml.com/</LinkRef>
+                </Link>
+                <Fragment> pour tirage offset 2 couleurs</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/application-focus.png">
+              <Legend>
+                <Fragment>démonstration le jour de la présentation</Fragment>
+              </Legend>
+              <Meta>
+                <Width>60</Width>
+                <Alignment>center</Alignment>
+                <Link>images/application-focus.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Alliance</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Site web de l'</Fragment>
+              <Link>
+                <LinkText>Association Alliance</LinkText>
+                <LinkRef>http://www.alliance-tt.ch/</LinkRef>
+              </Link>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>catalogue de programmes de manifestations et de fiches projets</Fragment>
+              </Item>
+              <Item>
+                <Fragment>chaine éditoriale avec gestion des inscriptions jusqu'à l'impression des badges</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/application-alliance.png">
+              <Legend>
+                <Fragment>démonstration le jour de la présentation</Fragment>
+              </Legend>
+              <Meta>
+                <Width>50</Width>
+                <Alignment>center</Alignment>
+                <Link>images/application-alliance.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>UAP</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Site web de l'</Fragment>
+              <Link>
+                <LinkText>Union des Artisans du Patrimoine de Belgique</LinkText>
+                <LinkRef>http://www.uniondesartisansdupatrimoine.be/accueil</LinkRef>
+              </Link>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>catalogue de membres</Fragment>
+              </Item>
+              <Item>
+                <Fragment>gestion de petites annonces modérées réservées aux membres</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/application-uap.png">
+              <Legend>
+                <Fragment>démonstration le jour de la présentation</Fragment>
+              </Legend>
+              <Meta>
+                <Width>50</Width>
+                <Alignment>center</Alignment>
+                <Link>images/application-uap.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>PSE</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Anuaire du </Fragment>
+              <Link>
+                <LinkText>Parc Scientifique de l'EPFL</LinkText>
+                <LinkRef>http://societes.parc-scientifique.ch/</LinkRef>
+              </Link>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>catalogue de startups</Fragment>
+              </Item>
+              <Item>
+                <Fragment>site et contenu multilingues et moteur de recherche (Apache Lucene)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>génération de courriers de relance pour inciter les entreprises à rédiger</Fragment>
+              </Item>
+              <Item>
+                <Fragment>exportation JSON vers un réseau d'écrans d'affichage dans les batiments</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+        <Block Numbering="none">
+          <Item>
+            <Illustration Source="images/application-pse.png">
+              <Meta>
+                <Width>50</Width>
+                <Alignment>center</Alignment>
+                <Link>images/application-pse.png</Link>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Dématérialisation de processus</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Applications métiers</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Nombreux modèles de documents</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Documents hybrides texte et formulaires</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Champs calculés et champs contraints</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Formulaires purs (ex: masque de recherche)</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>Modèles de données semi-structurées parfaitement adaptés</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Attention à la duplication des données</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Notion de transclusion (copies mortes ou vivantes)</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>L'extension de la librairie AXEL est en cours pour couvrir les besoins liés aux formulaires</Fragment>
+            </Para>
+            <Para>
+              <Fragment FragmentKind="emphasize">Exemple :</Fragment>
+            </Para>
+            <Illustration Source="images/champs-calcules.png">
+              <Meta>
+                <Width>80</Width>
+                <Alignment>center</Alignment>
+              </Meta>
+            </Illustration>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+    <Slide>
+      <Title>Conclusion</Title>
+      <Region>
+        <Meta>
+        </Meta>
+        <Block Numbering="bullet">
+          <Item>
+            <Para>
+              <Fragment>Oppidoc : de la recherche académique aux produits</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>3 ans pour innover dans la cadre de projets université - industrie (2008 - 2010)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>3 ans pour industrialiser avec l'aide de clients pioneers (2011 - 2013)</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>XML n'a jamais été aussi simple à mettre en oeuvre</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>La saisie de documents structurés n'est plus un verrou</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Les technologies de l'ingénierie documentaire (XSLT, XPath, XQuery) peuvent servir à créer une large gamme d'applications</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+          <Item>
+            <Para>
+              <Fragment>La nouvelle pile de développement XRX est en train de devenir une alternative aux langages procéduraux</Fragment>
+            </Para>
+            <SubList>
+              <Item>
+                <Fragment>Poussée par la vague noSQL et le Big Data (</Fragment>
+                <Fragment FragmentKind="emphasize">schema-less database</Fragment>
+                <Fragment>)</Fragment>
+              </Item>
+              <Item>
+                <Fragment>Idéale partout où un mélange de données structurées et semi-structurées est en jeu</Fragment>
+              </Item>
+            </SubList>
+          </Item>
+        </Block>
+      </Region>
+    </Slide>
+  </Slides>
+</SlideShow>

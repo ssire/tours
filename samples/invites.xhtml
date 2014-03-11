@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xt="http://ns.inria.org/xtiger">
+<head>
+ <title>Démonstration de l'édition d'une liste d'invités</title>
+ <xt:head label="Document">
+   <xt:component name="t_friend"> 
+     <li><xt:use types="text" param="filter=event">nom</xt:use><xt:menu-marker/></li>
+   </xt:component>
+ </xt:head> 
+ <link rel="stylesheet" href="../resources/axel-1.3/axel.css" type="text/css"/>
+ <script type="text/javascript" src="../resources/jquery/js/jquery-1.7.1.min.js"></script>
+ <script type="text/javascript" src="../resources/axel-1.3/axel.js"></script>
+ <script type="text/javascript" charset="utf-8">
+  function updated() {
+    $('#output').text($axel(document.body).xml());
+  }
+  function install() {
+   $axel.setup({ bundlesPath : '../resources/axel/bundles', enableTabGroupNavigation: true });
+   $axel(document.body).transform();
+   $('#editor').bind('axel-update', updated).bind('axel-remove', updated).bind('axel-add', updated);
+  }
+  xtdom.addEventListener(window,  'load', install, false);
+ </script>
+</head>
+<body>
+ <h1>Liste des invités :</h1>
+ <ul id="editor"> 
+   <xt:repeat minOccurs="0" maxOccurs="*" label="Invites">
+     <xt:use types="t_friend" label="Nom"/>
+   </xt:repeat>
+ </ul>
+ <hr/>
+ <pre id="output">
+ </pre>
+</body> 
+</html>
